@@ -32,7 +32,7 @@ namespace api_astronomia_teste01
 
 		//Para ativar a tradução, coloque sua chave do DeepL entre as aspas.
 		//Deixe vazio para usar o programa em inglês.
-		private readonly string chaveDeepL = "bafec6fc-1c2e-40d0-b41b-6b3b0a8d089e:fx";
+		private readonly string chaveDeepL = "";
 
 
 		private readonly HttpClient client = new HttpClient
@@ -74,7 +74,7 @@ namespace api_astronomia_teste01
 		{
 			string data = dtpData.Value.ToString("yyyy-MM-dd");
 
-			string url = $"planetary/apod?api_key=TOp3aiIHkagL37tBtwtLi26yrStoPCxUNKmTlcYF&date={data}";
+			string url = $"planetary/apod?api_key=DEMO_KEY&date={data}";
 
 			Apod resultado = await client.GetFromJsonAsync<Apod>(url);
 			if (resultado == null)
